@@ -16,6 +16,7 @@
         </ul>
     </nav>
     <main>
+        <a href="/detail/0">
         <section id="hero">
              
             <img src=<%= `../../assets/img${results[0].url}` %> alt="">
@@ -23,6 +24,7 @@
                 <h1><%= results[0].title %> </h1>
             </article>
         </section>
+        </a>
         <section id="allArticles">
             <h2>
                 All articles
@@ -30,6 +32,8 @@
             <section class="grid2">
                 <% results.forEach(elt => { %>
                     <% if (elt.id!=0) { %>
+                        
+                    <a href=<%=`/detail/${elt.id}`%> >
                      <div>
                     <% if (elt.id<=12) { %>
                         <img src=<%= `../../assets/img${elt.url}` %> alt="">
@@ -44,10 +48,12 @@
                     </article>
                     <% } %>
                     </div>
+                    </a>
                     <% }) %>
                 
             </section>
         </section>
     </main>
+    <%- include ('../partials/footer.ejs')  %> 
 </body>
 </html>

@@ -10,7 +10,7 @@ app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-const port = process.env.PORT||3050
+const port = process.env.PORT||3000
 
 //=====================BROWSE THE SERVER WITH MONGOOSE===========================
 
@@ -33,7 +33,7 @@ app.get('/detail/:id',(req,res)=>{
     blog.find()
     .then(results => {
         console.log(results)
-        res.render('pages/detail.ejs',{results})
+        res.render('pages/detail.ejs',{results:results,content:results[req.params.id-1]}) //hier hab ich den content her 
     })
     .catch(err => console.log(err))
 })

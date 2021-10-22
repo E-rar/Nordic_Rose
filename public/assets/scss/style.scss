@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Poppins:wght@500;900&display=swap'); //FONTS: Poppins (500,900) Fira Code (500)
 /*====================VARIABLES========================*/
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"); /*====================VARIABLES========================*/
+$headline: 900;
+$text: 500;
+$article: "Fira Code";
+$pLine: "Poppins", sans-serif;
 $headline:900;
 $text:500;
 $article:'Fira Code';
@@ -11,6 +16,7 @@ $article:'Fira Code';
     list-style:none;
     font-family:'Poppins';
     font-size:$text;
+    scroll-behavior:smooth;
 }
 a{
     color:#000;
@@ -46,6 +52,7 @@ nav{
 #hero{
    text-align:center;
    margin:3% 0 5% 0;
+   width:100%;
    article{
        display:flex;
        justify-content: center;
@@ -59,15 +66,22 @@ nav{
 }
 #allArticles{
     border-top:3px solid #000;
-    margin:0 25%;
+    margin:0 30%;
     text-align: center;
     .grid2{
         display:grid;
         grid-template-columns: repeat(2,1fr);
+        gap:1%;
+        margin-bottom:25%;
     }
     article{
         p{
             width:80%;
+            margin:0 auto;
+            font-family:Fira Code;
+            font-weight:500;
+            font-size:1.3em;
+
         }
 
     }
@@ -75,6 +89,103 @@ nav{
         font-size:2.5em;
         text-align:center;
         margin:6% 0 5% 0;
+    }
+}
+/*=============What to Read next===================*/
+#whatNext{
+    border-top:3px solid #000000;
+    
+    
+    text-align: center;
+    .grid3{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        row-gap:3%;
+        margin-bottom:15%;
+        img{
+            width:80%;
+        }
+    }
+    article{
+        p{
+            width:80%;
+            margin:0 auto;
+            font-family:Fira Code;
+            font-weight:500;
+            font-size:1.7em;
+
+        }
+
+    }
+    h2{
+        font-size:3.5em;
+        text-align:center;
+        margin:6% 0 5% 0;
+    }
+}
+
+/*======================FOOTER=====================*/
+footer {
+    background: #000;
+    color: white;
+    padding-top: 2%;
+
+    .works {
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            font-family: $article;
+            font-weight: 300;
+            font-size: 1.3em;
+        }
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        .logoWhite {
+            margin-top: 7%;
+            margin-bottom: 3%;
+        }
+
+        div {
+            .lorem {
+                width: 40%;
+                text-align: center;
+                padding-bottom: 2%;
+                font-family: $pLine;
+            }
+
+            .linksSm {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 6%;
+                width: 17vw;
+                li {
+                    // padding-right: 10%;
+                    justify-content: space-between;
+                    text-align: center;
+
+                    a {
+                        font-family: $article;
+                        font-weight: 500;
+                        color: white;
+                        text-decoration: underline;
+                        text-decoration-thickness: 0.5px;
+                    }
+                }
+            }
+
+            .copyright {
+                font-family: $article;
+                text-align: center;
+                padding-bottom: 5%;
+            }
+        }
     }
 }
 

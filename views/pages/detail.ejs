@@ -8,6 +8,61 @@
     <link rel="stylesheet" href="/assets/scss/style.css">
 </head>
 <body>
+    <nav>
+        <img src="/assets/img/logo.svg" alt="" id="logo">
+        <ul>
+           <li ><a href="/">ALL</a></li>
+           <li ><a href="/add">NEW ARTICLE</a></li>
+        </ul>
+    </nav>
+    <div class="contentTitle">
+        <%= content.title %> 
+    </div>
+    
+    <img src=<%= `../../assets/img${content.url}` %>  alt="">
+    <article class="contentPost">
+        <div class="blogHeader">
+            
+            <img src=<%= content.author_bild %>  alt="">
+            <div>
+                <h5>
+                    <%= content.author %> 
+                </h5>
+                <h6>
+                    <%= content.published_at %> •
+                    <%= content.duration %>min read
+                    
+                </h6>
+            </div>
+        </div>
+        <div>
+            <p>
+                <%= content.body %> 
+            </p>
+        </div>
+    </article>
     <h1>detail</h1>
+    <section id="whatNext">
+        <h2>What to read next</h2>
+        <section class="grid3">
+            <% results.forEach(elt => { %>
+                <% if (1<=elt.id&&elt.id<=7) { %>
+                <a href=<%=`/detail/${elt.id}`%>>
+                    <div>
+                        <% if (elt.id<=12) { %>
+                        <img src=<%= `../../assets/img${elt.url}` %> alt="">
+                        <% } else { %>
+                            <img src=<%= `${elt.url}` %> alt="">
+                        <% } %>
+                            <article>
+                                <p><%= elt.title %> </p>
+                            </article>
+                    <% } %>
+                    </div>
+                </a>
+            <% }) %>
+        </section>
+    </section>
+    <%- include('../partials/footer.ejs')  %> 
 </body>
 </html>

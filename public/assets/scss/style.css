@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Poppins:wght@500;900&display=swap");
 /*====================VARIABLES========================*/
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/*====================VARIABLES========================*/
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +9,7 @@
   list-style: none;
   font-family: 'Poppins';
   font-size: 500;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -59,6 +62,7 @@ nav ul #active {
 #hero {
   text-align: center;
   margin: 3% 0 5% 0;
+  width: 100%;
 }
 
 #hero article {
@@ -78,7 +82,7 @@ nav ul #active {
 
 #allArticles {
   border-top: 3px solid #000;
-  margin: 0 25%;
+  margin: 0 30%;
   text-align: center;
 }
 
@@ -87,15 +91,138 @@ nav ul #active {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  gap: 1%;
+  margin-bottom: 25%;
 }
 
 #allArticles article p {
   width: 80%;
+  margin: 0 auto;
+  font-family: Fira Code;
+  font-weight: 500;
+  font-size: 1.3em;
 }
 
 #allArticles h2 {
   font-size: 2.5em;
   text-align: center;
   margin: 6% 0 5% 0;
+}
+
+/*=============What to Read next===================*/
+#whatNext {
+  border-top: 3px solid #000000;
+  text-align: center;
+}
+
+#whatNext .grid3 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  row-gap: 3%;
+  margin-bottom: 15%;
+}
+
+#whatNext .grid3 img {
+  width: 80%;
+}
+
+#whatNext article p {
+  width: 80%;
+  margin: 0 auto;
+  font-family: Fira Code;
+  font-weight: 500;
+  font-size: 1.7em;
+}
+
+#whatNext h2 {
+  font-size: 3.5em;
+  text-align: center;
+  margin: 6% 0 5% 0;
+}
+
+/*======================FOOTER=====================*/
+footer {
+  background: #000;
+  color: white;
+  padding-top: 2%;
+}
+
+footer .works {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .works li {
+  font-family: "Fira Code";
+  font-weight: 300;
+  font-size: 1.3em;
+}
+
+footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer div .logoWhite {
+  margin-top: 7%;
+  margin-bottom: 3%;
+}
+
+footer div div .lorem {
+  width: 40%;
+  text-align: center;
+  padding-bottom: 2%;
+  font-family: "Poppins", sans-serif;
+}
+
+footer div div .linksSm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 6%;
+  width: 17vw;
+}
+
+footer div div .linksSm li {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+footer div div .linksSm li a {
+  font-family: "Fira Code";
+  font-weight: 500;
+  color: white;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+}
+
+footer div div .copyright {
+  font-family: "Fira Code";
+  text-align: center;
+  padding-bottom: 5%;
 }
 /*# sourceMappingURL=style.css.map */
