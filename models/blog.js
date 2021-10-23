@@ -4,10 +4,6 @@ const Schema = mongoose.Schema;
 //const {Schema}=mongoose
 
 const blogSchema = new Schema({
-    _id:{
-        type:Number,
-        required:true,
-    },
     id: {
         type: Number,
         required: true,

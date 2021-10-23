@@ -33,7 +33,7 @@ app.get('/detail/:id',(req,res)=>{
     blog.find()
     .then(results => {
         console.log(results)
-        res.render('pages/detail.ejs',{results:results,content:results[req.params.id-1]}) //hier hab ich den content her 
+        res.render('pages/detail.ejs',{results:results,content:results[req.params.id]}) //hier hab ich den content her 
     })
     .catch(err => console.log(err))
 })
@@ -41,7 +41,11 @@ app.get('/add',(req,res)=>{
     blog.find()
     .then(results => {
         console.log(results)
-        res.render('pages/add.ejs',{results})
+        blog.find().count()
+        .then(response=>{
+            res.render('pages/add.ejs',{results,response})    
+        })
+        // res.render('pages/add.ejs',{results})
     })
     .catch(err => console.log(err))
 

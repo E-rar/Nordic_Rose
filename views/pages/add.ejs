@@ -16,17 +16,18 @@
         </ul>
     </nav>
     <section class="add_form">
-        <h1>ADD NEW ARTICLE</h1>
+        <h1 id="addHeadline">ADD NEW ARTICLE</h1>
+        <div id='stripe'></div>
+
         <form action="/new" method="POST">
-        <input type="number" name="_id" id="" placeholder="_id">
-        <input type="number" name="id" placeholder="id">
+        <input type="hidden" name="id" placeholder="id" value="<%=response%>">
         <input type="text" name="title" placeholder="Title">
-        <input type="text" name="url" id="" placeholder="url">
+        <input type="text" name="url" id="" placeholder="Url Picture">
         <input type="text" name="author" placeholder="Author">
-        <input type="text" name="body" id="body" placeholder="Article">
-        <input type="number" name="duration" id="" placeholder="Duration">
-        <input type="date" name="published_at" id="" placeholder="published at">
-        <input type="text" name="author_bild" placeholder="author_bild">
+        <input type="text" name="body" id="body" placeholder="Write your article here....">
+        <input type="hidden" name="duration" id="" placeholder="Duration" value="<%=3%>">
+        <input type="hidden" name="published_at" id="date" placeholder="published at" value="<%=new Date().toLocaleDateString('de-DE')%>">
+        <input type="hidden" name="author_bild" placeholder="author_bild" value="https://source.unsplash.com/random/100x100">
         <input type="submit" value="SEND ARTICLE">
         </form>
     </section>
@@ -34,7 +35,7 @@
         <h2>What to read next</h2>
         <section class="grid3">
             <% results.forEach(elt => { %>
-                <% if (1<=elt.id&&elt.id<=7) { %>
+                <% if (1<=elt.id&&elt.id<=6) { %>
                 <a href=<%=`/detail/${elt.id}`%>>
                     <div>
                         <% if (elt.id<=12) { %>
