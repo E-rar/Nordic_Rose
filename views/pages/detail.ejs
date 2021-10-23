@@ -15,15 +15,20 @@
            <li ><a href="/add">NEW ARTICLE</a></li>
         </ul>
     </nav>
-    <div class="contentTitle">
-        <%= content.title %> 
+        <h1 class="contentTitle"><%= content.title %> </h1>
+        
+    <div class="imgContainer">
+        <% if (content.id<=12) { %>
+            <img src=<%= `../../assets/img${content.url}` %>  alt="">
+            <% } else { %>
+                <img src=<%= `${content.url}` %>  alt="">
+        <% } %>
     </div>
     
-    <img src=<%= `../../assets/img${content.url}` %>  alt="">
     <article class="contentPost">
         <div class="blogHeader">
             
-            <img src=<%= content.author_bild %>  alt="">
+            <img  class="authorPic" src=<%= content.author_bild %>  alt="">
             <div>
                 <h5>
                     <%= content.author %> 
@@ -41,7 +46,8 @@
             </p>
         </div>
     </article>
-    <h1>detail</h1>
+
+    
     <section id="whatNext">
         <h2>What to read next</h2>
         <section class="grid3">

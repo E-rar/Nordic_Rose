@@ -127,7 +127,53 @@ form{
         cursor:pointer;
     }
 }
-
+/*===================DETAIL========================*/
+.contentTitle{
+    // width:50%;
+    margin:3% 20% 5% 20%;
+    text-align:center;
+    font-weight:900;
+    font-size:4em;
+}
+.imgContainer{
+    width:100%;
+    img{
+        width:100%;
+    }
+}
+.contentPost{
+    margin:3% 20% 10% 20%;
+    .blogHeader{
+        border-top:2px solid black;
+        display:flex;
+        justify-content:flex-start;
+        align-items:center;
+        margin-bottom:5%;
+        .authorPic{
+            border-radius:50%;
+            width:7%;
+            margin:1% 5% 1% 1%;
+        }
+        div{
+            h5{
+                font-family: Fira Code;
+                font-weight:700;
+                font-size:1.3em;
+                margin:0 0 2% 0;
+            }
+            h6{
+                font-family: Fira Code;
+                font-weight:400;
+                font-size:1em;
+            }
+        }
+    }
+    div{
+        p{
+            font-size:1.6em;
+        }
+    }
+}
 /*=============What to Read next===================*/
 #whatNext{
     border-top:3px solid #000000;

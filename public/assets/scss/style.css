@@ -150,6 +150,63 @@ form input[type=submit] {
   cursor: pointer;
 }
 
+/*===================DETAIL========================*/
+.contentTitle {
+  margin: 3% 20% 5% 20%;
+  text-align: center;
+  font-weight: 900;
+  font-size: 4em;
+}
+
+.imgContainer {
+  width: 100%;
+}
+
+.imgContainer img {
+  width: 100%;
+}
+
+.contentPost {
+  margin: 3% 20% 10% 20%;
+}
+
+.contentPost .blogHeader {
+  border-top: 2px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5%;
+}
+
+.contentPost .blogHeader .authorPic {
+  border-radius: 50%;
+  width: 7%;
+  margin: 1% 5% 1% 1%;
+}
+
+.contentPost .blogHeader div h5 {
+  font-family: Fira Code;
+  font-weight: 700;
+  font-size: 1.3em;
+  margin: 0 0 2% 0;
+}
+
+.contentPost .blogHeader div h6 {
+  font-family: Fira Code;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.contentPost div p {
+  font-size: 1.6em;
+}
+
 /*=============What to Read next===================*/
 #whatNext {
   border-top: 3px solid #000000;
