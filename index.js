@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 const blog = require('./models/blog.js')
 require('dotenv').config()
 const dbUri = `mongodb+srv://supercode:${process.env.MONGODB_PW}@supercode.fxgp9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+var cors = require('cors')
 //====================MIDDLEWARES============================================
 app.use(express.static('public'))
 app.set('view engine', 'ejs')
@@ -11,6 +12,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 const port = process.env.PORT||3000
+app.use(cors())
 
 //=====================BROWSE THE SERVER WITH MONGOOSE===========================
 
