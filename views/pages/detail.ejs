@@ -10,11 +10,33 @@
 <body>
     <nav>
         <img src="/assets/img/logo.svg" alt="" id="logo">
-        <ul>
+        <ul class="hide">
            <li ><a href="/">ALL</a></li>
            <li ><a href="/add">NEW ARTICLE</a></li>
         </ul>
+        <span id="burgerMenu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
     </nav>
+        <!-- overlayMenü -->
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+              <a href="/">All</a>
+              <a href="/add">NEW ARTICLE</a>
+              
+            </div>
+            
+            <!-- Funktionen für das Overlay Menü -->
+            <script>
+                function openNav() {
+                  document.getElementById("myNav").style.width = "100vw";
+                }
+                
+                function closeNav() {
+                  document.getElementById("myNav").style.width = "0%";
+                }
+            </script>
+        <!-- overlayMenü -->
+        </div>
         <h1 class="contentTitle"><%= content.title %> </h1>
         
     <div class="imgContainer">
