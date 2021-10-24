@@ -20,6 +20,10 @@ mongoose.connect(dbUri, () => {
         console.log(`listening at http://localhost:${port}`)
     })
 })
+//=====================REDIRECT===================================================
+app.get('/',(req,res)=>{
+    res.redirect('/')
+})
 //=====================ROUTING===================================================
 app.get('/',(req,res)=>{
     blog.find()
