@@ -23,9 +23,9 @@ mongoose.connect(dbUri, () => {
     })
 })
 //=====================REDIRECT===================================================
-app.get('/',(req,res)=>{
-    res.redirect('/add')
-})
+// app.get('/',(req,res)=>{
+//     res.redirect('/add')
+// })
 //=====================ROUTING===================================================
 app.get('/',(req,res)=>{
     blog.find()
